@@ -1,0 +1,47 @@
+# Registry 38 Kabupaten/Kota Provinsi Jawa Timur.
+# kode      : kode wilayah BPS (juga dipakai sebagai `domain` pada BPS WebAPI)
+# subdomain : https://{subdomain}.bps.go.id
+# Verifikasi subdomain dilakukan oleh tests/test_registry.py (offline) dan saat agen pertama dijalankan.
+
+wilayah:
+  # ===== Kabupaten (29) =====
+  - {kode: "3501", nama: Pacitan,      jenis: kabupaten, subdomain: pacitankab}
+  - {kode: "3502", nama: Ponorogo,     jenis: kabupaten, subdomain: ponorogokab}
+  - {kode: "3503", nama: Trenggalek,   jenis: kabupaten, subdomain: trenggalekkab}
+  - {kode: "3504", nama: Tulungagung,  jenis: kabupaten, subdomain: tulungagungkab}
+  - {kode: "3505", nama: Blitar,       jenis: kabupaten, subdomain: blitarkab}
+  - {kode: "3506", nama: Kediri,       jenis: kabupaten, subdomain: kedirikab}
+  - {kode: "3507", nama: Malang,       jenis: kabupaten, subdomain: malangkab}
+  - {kode: "3508", nama: Lumajang,     jenis: kabupaten, subdomain: lumajangkab}
+  - {kode: "3509", nama: Jember,       jenis: kabupaten, subdomain: jemberkab}
+  - {kode: "3510", nama: Banyuwangi,   jenis: kabupaten, subdomain: banyuwangikab}
+  - {kode: "3511", nama: Bondowoso,    jenis: kabupaten, subdomain: bondowosokab}
+  - {kode: "3512", nama: Situbondo,    jenis: kabupaten, subdomain: situbondokab}
+  - {kode: "3513", nama: Probolinggo,  jenis: kabupaten, subdomain: probolinggokab}
+  - {kode: "3514", nama: Pasuruan,     jenis: kabupaten, subdomain: pasuruankab}
+  - {kode: "3515", nama: Sidoarjo,     jenis: kabupaten, subdomain: sidoarjokab}
+  - {kode: "3516", nama: Mojokerto,    jenis: kabupaten, subdomain: mojokertokab}
+  - {kode: "3517", nama: Jombang,      jenis: kabupaten, subdomain: jombangkab}
+  - {kode: "3518", nama: Nganjuk,      jenis: kabupaten, subdomain: nganjukkab}
+  - {kode: "3519", nama: Madiun,       jenis: kabupaten, subdomain: madiunkab}
+  - {kode: "3520", nama: Magetan,      jenis: kabupaten, subdomain: magetankab}
+  - {kode: "3521", nama: Ngawi,        jenis: kabupaten, subdomain: ngawikab}
+  - {kode: "3522", nama: Bojonegoro,   jenis: kabupaten, subdomain: bojonegorokab}
+  - {kode: "3523", nama: Tuban,        jenis: kabupaten, subdomain: tubankab}
+  - {kode: "3524", nama: Lamongan,     jenis: kabupaten, subdomain: lamongankab}
+  - {kode: "3525", nama: Gresik,       jenis: kabupaten, subdomain: gresikkab}
+  - {kode: "3526", nama: Bangkalan,    jenis: kabupaten, subdomain: bangkalankab}
+  - {kode: "3527", nama: Sampang,      jenis: kabupaten, subdomain: sampangkab}
+  - {kode: "3528", nama: Pamekasan,    jenis: kabupaten, subdomain: pamekasankab}
+  - {kode: "3529", nama: Sumenep,      jenis: kabupaten, subdomain: sumenepkab}
+
+  # ===== Kota (9) =====
+  - {kode: "3571", nama: Kediri,       jenis: kota, subdomain: kedirikota}
+  - {kode: "3572", nama: Blitar,       jenis: kota, subdomain: blitarkota}
+  - {kode: "3573", nama: Malang,       jenis: kota, subdomain: malangkota}
+  - {kode: "3574", nama: Probolinggo,  jenis: kota, subdomain: probolinggokota}
+  - {kode: "3575", nama: Pasuruan,     jenis: kota, subdomain: pasuruankota}
+  - {kode: "3576", nama: Mojokerto,    jenis: kota, subdomain: mojokertokota}
+  - {kode: "3577", nama: Madiun,       jenis: kota, subdomain: madiunkota}
+  - {kode: "3578", nama: Surabaya,     jenis: kota, subdomain: surabayakota}
+  - {kode: "3579", nama: Batu,         jenis: kota, subdomain: batukota}

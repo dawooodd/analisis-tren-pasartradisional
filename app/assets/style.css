@@ -1,0 +1,23 @@
+/* Design tokens — EWS Pasar Jatim */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --zona-hijau: #2EAD6B;
+  --zona-kuning: #E8C547;
+  --zona-oranye: #F2994A;
+  --zona-merah: #E5484D;
+  --surface: #1A2129;
+  --border: #2A333D;
+  --radius: 12px;
+}
+
+html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
+
+[data-testid="stMetric"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  transition: transform .15s ease, border-color .15s ease;
+}
+[data-testid="stMetric"]:hover { transform: translateY(-2px); border-color: var(--zona-oranye); }

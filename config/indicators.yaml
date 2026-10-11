@@ -1,0 +1,81 @@
+# Kamus indikator kanonik.
+# `kode` adalah ID internal yang dipakai di seluruh pipeline (kolom `indikator` pada format long).
+# `sumber` merujuk ke key di settings.yaml > sources.
+# `bps_var_id` diisi saat implementasi agen (berbeda per domain BPS -> boleh dict per kode wilayah).
+# `arah_risiko`: +1 = nilai naik menambah risiko, -1 = nilai naik menurunkan risiko.
+
+indikator:
+  # --- Infrastruktur pasar ---
+  - kode: jml_pasar_tradisional
+    nama: Jumlah pasar tradisional
+    satuan: unit
+    kelompok: infrastruktur
+    sumber: [bps_api, bps_html]
+    bps_var_id: null
+    arah_risiko: -1
+  - kode: jml_kios_los
+    nama: Jumlah kios/los/lapak
+    satuan: unit
+    kelompok: infrastruktur
+    sumber: [bps_html, satudata]
+    bps_var_id: null
+    arah_risiko: -1
+
+  # --- Aktivitas ---
+  - kode: jml_pedagang_aktif
+    nama: Jumlah pedagang aktif
+    satuan: orang
+    kelompok: aktivitas
+    sumber: [satudata]
+    bps_var_id: null
+    arah_risiko: -1
+  - kode: retribusi_pasar
+    nama: Realisasi retribusi pasar
+    satuan: rupiah
+    kelompok: aktivitas
+    sumber: [satudata]
+    bps_var_id: null
+    arah_risiko: -1
+
+  # --- Makroekonomi ---
+  - kode: pdrb_g_adhk
+    nama: PDRB Kategori G (ADHK 2010)
+    satuan: juta rupiah
+    kelompok: makro
+    sumber: [bps_api]
+    bps_var_id: null
+    arah_risiko: 0
+  - kode: pdrb_perkapita
+    nama: PDRB per kapita ADHB
+    satuan: ribu rupiah
+    kelompok: makro
+    sumber: [bps_api]
+    bps_var_id: null
+    arah_risiko: 0
+
+  # --- Kompetitor fisik ---
+  - kode: jml_minimarket
+    nama: Jumlah minimarket/toko modern
+    satuan: unit
+    kelompok: kompetitor
+    sumber: [bps_html]
+    bps_var_id: null
+    arah_risiko: 1
+
+  # --- Digital ---
+  - kode: pct_rt_akses_internet
+    nama: Persentase rumah tangga mengakses internet
+    satuan: persen
+    kelompok: digital
+    sumber: [bps_api]
+    bps_var_id: null
+    arah_risiko: 1
+
+  # --- Demografi ---
+  - kode: jml_penduduk
+    nama: Jumlah penduduk
+    satuan: jiwa
+    kelompok: demografi
+    sumber: [bps_api]
+    bps_var_id: null
+    arah_risiko: 0

@@ -1,0 +1,48 @@
+project:
+  name: pasar-jatim-ews
+  provinsi_kode: "35"
+  tahun_mulai: 2014
+  tahun_akhir: 2024
+  periode_covid: [2020, 2021]
+  horizon_proyeksi: 5            # 2025-2029
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  external: data/external
+  geojson: data/external/geo/jatim_kabkota.geojson
+  registry: agents/registry/wilayah_jatim.yaml
+  indicators: config/indicators.yaml
+  logs: logs
+
+agents:
+  max_concurrency: 6             # batas koneksi simultan ke server pemerintah
+  request_timeout_s: 30
+  rate_limit_per_s: 2.0          # per host
+  retry:
+    max_attempts: 4
+    backoff_min_s: 1
+    backoff_max_s: 30
+  respect_robots_txt: true
+  user_agent: "PasarJatimEWS/0.1 (riset akademik; kontak: ganti@email.com)"
+
+sources:
+  bps_api:
+    base_url: https://webapi.bps.go.id/v1/api
+    enabled: true
+  bps_html:
+    url_template: "https://{subdomain}.bps.go.id"
+    enabled: true
+  satudata:
+    base_url: https://satudata.jatimprov.go.id
+    enabled: false               # aktifkan setelah endpoint diverifikasi
+  ecommerce:
+    enabled: true
+
+risk_index:
+  thresholds:                    # Market Distress Index (0-100)
+    hijau: [0, 25]
+    kuning: [26, 50]
+    oranye: [51, 75]
+    merah: [76, 100]
