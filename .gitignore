@@ -1,52 +1,96 @@
-# --- Python ---
+# =====================================================================
+# Python
+# =====================================================================
 __pycache__/
 *.py[cod]
+*.so
 *.egg-info/
 .eggs/
 build/
 dist/
+pip-wheel-metadata/
+
+# =====================================================================
+# Testing, linting & type-checking
+# =====================================================================
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.tox/
+.nox/
 .coverage
+.coverage.*
+coverage.xml
 htmlcov/
 
-# --- Environment ---
+# =====================================================================
+# Environment & secrets
+# =====================================================================
 .venv/
 venv/
 env/
 .env
+.env.*
 !.env.example
+.streamlit/secrets.toml
 
-# --- Data (immutable raw & intermediate tidak di-commit) ---
-data/raw/**
-data/interim/**
-data/processed/**
-!data/**/.gitkeep
-!data/processed/sample_*.parquet
+# =====================================================================
+# Data
+#   raw/interim/processed dibangkitkan ulang oleh pipeline -> tidak di-commit.
+#   Pengecualian: sampel kecil untuk demo & GeoJSON batas wilayah.
+# =====================================================================
+data/raw/
+data/interim/
+data/processed/*
+data/external/*
+!data/external/geo/
+data/external/geo/*
+!data/external/geo/*.geojson
 *.parquet
 *.feather
+*.h5
 *.db
 *.sqlite
+*.duckdb
+!data/processed/sample_*.parquet
 
-# --- Notebooks ---
+# =====================================================================
+# Notebooks
+# =====================================================================
 .ipynb_checkpoints/
+*.nbconvert.ipynb
 
-# --- Modeling artifacts ---
+# =====================================================================
+# Modeling artifacts
+# =====================================================================
 mlruns/
 models_store/
+catboost_info/
+lightning_logs/
 *.pkl
 *.joblib
+*.ckpt
 
-# --- Logs ---
-logs/**
-!logs/.gitkeep
+# =====================================================================
+# Logs & run manifests
+# =====================================================================
+logs/
+*.log
 
-# --- Streamlit secrets ---
-app/.streamlit/secrets.toml
+# =====================================================================
+# Scraping (Playwright)
+# =====================================================================
+playwright-report/
+test-results/
 
-# --- OS / IDE ---
+# =====================================================================
+# OS / Editor
+# =====================================================================
 .DS_Store
 Thumbs.db
+desktop.ini
+*.swp
+*~
 .vscode/
 .idea/
+*.code-workspace
